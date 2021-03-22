@@ -1,0 +1,57 @@
+
+MainWindow {
+    background-color: white;
+}
+
+Title {
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 80px;
+    font-weight: bold;
+    text-align: left;
+    padding: 40px 0px 20px 50px;
+}
+
+Icon {
+    padding: 40px 100px 20px 0px;
+}
+
+Word {
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+}
+
+TypeBox {
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+    text-align: left;
+    padding: 8px 8px 8px 8px;
+    border-top: 0.5px solid grey;
+    border-bottom: 0.5px solid grey;
+}
+
+ResetBtn {
+    background-color: gold;
+    border-radius: 25px;
+}
+
+ResetBtn:hover {
+    background-color: goldenrod;
+}
+
+Timer {
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+    font-weight: bold;
+    padding-left: 2px;
+}
+
+Wpm {
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+    font-weight: bold;
+}
