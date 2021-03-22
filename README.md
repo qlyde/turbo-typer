@@ -1,1 +1,1 @@
-# turbo-typer
+# turbotyper
