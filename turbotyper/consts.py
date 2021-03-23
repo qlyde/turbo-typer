@@ -1,4 +1,3 @@
-
 class Const:
     # resources
     RESOURCES = "turbotyper/resources"
