@@ -21,6 +21,7 @@ class Game:
         self.wpm.reset()
         #self.accuracy.reset()
         self.started = False
+        self.stopped = False
 
     def finish(self):
         self.timer.finish()

@@ -17,7 +17,6 @@ class ResetBtn(QPushButton):
         self.clicked.connect(self._onClick)
 
     def _onClick(self):
-        self._game.stopped = False
         self._game.reset() # reset timer, wpm, accuracy
         self._quote.reset() # regenerate quote
         self._typebox.clear() # clear typebox
