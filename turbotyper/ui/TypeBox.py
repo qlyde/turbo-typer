@@ -3,13 +3,11 @@ from PyQt5.QtWidgets import QLineEdit
 
 
 class TypeBox(QLineEdit):
-    def __init__(self, quote, game):
-        super().__init__()
-        self.quote = quote
+    def __init__(self, quote, game, *args, **kwargs):
+        super(TypeBox, self).__init__(*args, **kwargs)
+        self._quote = quote
         self._game = game
-
         self.setPlaceholderText("type here...")
-        self.setFocus()
 
     def keyPressEvent(self, event):
         if not self._game.stopped:
@@ -18,8 +16,8 @@ class TypeBox(QLineEdit):
                 self._game.begin()
 
             if event.key() == Qt.Key.Key_Space:
-                self.quote.submit(self.text())
+                self._quote.submit(self.text())
                 self.clear()
             else:
                 super(TypeBox, self).keyPressEvent(event)
-                self.quote.notify(self.text())
+                self._quote.notify(self.text())

@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+
+
 #############################################################################
 ##
 ## Copyright (C) 2013 Riverbank Computing Limited.
@@ -44,9 +47,14 @@ from PyQt5.QtWidgets import QLayout, QSizePolicy
 
 
 class FlowLayout(QLayout):
-    def __init__(self, margin=0, spacing=-1):
-        super(FlowLayout, self).__init__()
+    def __init__(self, parent=None, margin=0, spacing=-1):
+        super(FlowLayout, self).__init__(parent)
+
+        if parent is not None:
+            self.setContentsMargins(margin, margin, margin, margin)
+
         self.setSpacing(spacing)
+
         self.itemList = []
 
     def __del__(self):
